@@ -25,3 +25,23 @@ tsParticles.load("tsparticles", {
     size: { value: { min: 1, max: 3 } }
   }
 });
+
+//Restart Button
+
+const devButton = document.getElementById("devButton");
+
+devButton.addEventListener("mouseenter", () => {
+  devButton.innerHTML =
+    "&lt;<span class='name'>AhmetOezcan</span> " +
+    "<span class='code-green'>onClick</span>={" +
+    "<span class='code-green'>reload</span>} /&gt;";
+});
+
+devButton.addEventListener("mouseleave", () => {
+  devButton.innerHTML =
+    "&lt;<span class='name'>AhmetOezcan</span> /&gt;";
+});
+
+devButton.addEventListener("click", () => {
+    location.reload();
+});

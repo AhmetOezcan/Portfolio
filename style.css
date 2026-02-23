@@ -13,6 +13,50 @@ body {
   overflow-x: hidden;
 }
 
+/*Restart Button*/
+.top-dev-nav {
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  font-family: monospace;
+  font-size: 30px;
+}
+
+.dev-button {
+  cursor: pointer;
+  font-family: monospace;
+  transition: all 0.3s ease;
+}
+
+.name {
+  color: #38bdf8;
+}
+
+.code-green {
+  color: #22c55e;
+}
+
+.dev-button:hover {
+  opacity: 0.9;
+}
+
+/* Profilbild */
+.profile-image {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 50%;
+  margin-bottom: 30px;
+
+  border: 3px solid #3b82f6;
+
+  box-shadow: 
+    0 0 25px rgba(59, 130, 246, 0.4);
+}
+
 /* HERO SECTION */
 .hero {
   position: relative;
@@ -40,27 +84,19 @@ body {
 }
 
 .hero-name {
-  font-size: 4rem;
-  font-weight: 800;
-  letter-spacing: -2px;
-  margin-bottom: 10px;
+  font-size: 6rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .hero-role {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #60a5fa;
-  margin-bottom: 25px;
-}
-
-.hero-description {
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1rem;
+  letter-spacing: 6px;
+  text-transform: uppercase;
   color: #cbd5e1;
-  margin-bottom: 35px;
-  max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 40px;
 }
 
 /* BUTTONS*/
