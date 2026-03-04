@@ -26,7 +26,16 @@ body {
 .dev-button {
   cursor: pointer;
   font-family: monospace;
-  transition: all 0.3s ease;
+  opacity: 1;
+  transform: scale(1);
+  transition:
+    opacity 0.6s cubic-bezier(0.4, 0.0, 0.2, 1),
+    transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.dev-button.is-fading {
+  opacity: 0;
+  transform: scale(0.96);
 }
 .name       { color: #38bdf8; }
 .code-green { color: #22c55e; }
@@ -78,6 +87,22 @@ body {
   letter-spacing: 2px;
   margin-bottom: 20px;
   text-transform: uppercase;
+  white-space: nowrap;
+  display: inline-block; /* needed so the whole name acts as one line */
+}
+
+.hero-letter {
+  display: inline-block;
+  opacity: 0;
+  transform-origin: bottom center;
+  animation: hero-letter-in 0.6s ease-out forwards;
+}
+
+@keyframes hero-letter-in {
+  0%   { transform: translateY(10px); opacity: 0; }
+  40%  { transform: translateY(-12px); opacity: 1; }
+  70%  { transform: translateY(0); }
+  100% { transform: translateY(0); opacity: 1; }
 }
 .hero-role {
   font-size: 1rem;
@@ -85,4 +110,42 @@ body {
   text-transform: uppercase;
   color: #cbd5e1;
   margin-bottom: 40px;
+}
+
+.continue-button {
+  position: fixed;          
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  background: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  font-size: 32px;          
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+
+  /* idle up‑and‑down animation */
+  animation: float-arrow 1.6s ease-in-out infinite;
+}
+
+.continue-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.6);
+  transform: translateX(-50%) translateY(-4px) scale(1.05);
+}
+
+@keyframes float-arrow {
+  0%   { transform: translateX(-50%) translateY(0); }
+  50%  { transform: translateX(-50%) translateY(-8px); }
+  100% { transform: translateX(-50%) translateY(0); }
 }
