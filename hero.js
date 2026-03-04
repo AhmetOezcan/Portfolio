@@ -1,11 +1,9 @@
-/* global tsParticles */
-
+// ── PARTICLES ──
 tsParticles.load("tsparticles", {
   fullScreen: { enable: false },
   background: { color: "transparent" },
   fpsLimit: 60,
   detectRetina: true,
-
   interactivity: {
     events: {
       onHover: { enable: true, mode: "grab" },
@@ -15,7 +13,6 @@ tsParticles.load("tsparticles", {
       grab: { distance: 140, links: { opacity: 0.35 } },
     },
   },
-
   particles: {
     number: { value: 70, density: { enable: true, area: 900 } },
     color: { value: "#93c5fd" },
@@ -30,39 +27,22 @@ tsParticles.load("tsparticles", {
     opacity: { value: 0.6 },
     size: { value: { min: 1, max: 3 } },
   },
+}).then(() => {
+  const canvas = document.querySelector("#tsparticles canvas");
+  if (canvas) canvas.style.pointerEvents = "none";
 });
 
-//Restart Button
-
+// ── RESTART BUTTON ──
 const devButton = document.getElementById("devButton");
-
 devButton.addEventListener("mouseenter", () => {
   devButton.innerHTML =
     "&lt;<span class='name'>AhmetOezcan</span> " +
     "<span class='code-green'>onClick</span>={" +
     "<span class='code-green'>reload</span>} /&gt;";
 });
-
 devButton.addEventListener("mouseleave", () => {
   devButton.innerHTML = "&lt;<span class='name'>AhmetOezcan</span> /&gt;";
 });
-
 devButton.addEventListener("click", () => {
   location.reload();
-});
-
-//About section
-
-const arrows = document.querySelectorAll(".about-arrow");
-
-arrows.forEach((arrow) => {
-  arrow.addEventListener("click", () => {
-    const box = arrow.closest(".about-box");
-    const text = box.querySelector(".about-text");
-
-    const isHidden = text.classList.toggle("is-hidden");
-
-    arrow.setAttribute("aria-expanded", String(!isHidden));
-    arrow.textContent = isHidden ? "⬇" : "⬆";
-  });
 });
