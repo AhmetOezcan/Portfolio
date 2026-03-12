@@ -316,40 +316,37 @@
         </div>
         <p>Ich bin offen für Vollzeit-Stellen, Freelance-Projekte und spannende Kooperationen. Schreib mir einfach.</p>
         <div class="contact-links">
-          <a href="mailto:hallo@dev.io" class="contact-link">
+          <a href="mailto:ahmetzcan1@outlook.com" class="contact-link">
             <span class="icon">@</span>
-            hallo@dev.io
+            ahmetzcan1@outlook.com
           </a>
-          <a href="#" class="contact-link">
+          <a href="https://www.linkedin.com/in/ahmet-oezcan/" class="contact-link">
             <span class="icon">in</span>
-            linkedin.com/in/devname
+            linkedin.com/in/ahmet-oezcan/
           </a>
-          <a href="#" class="contact-link">
+          <a href="https://github.com/AhmetOezcan?tab=repositories" class="contact-link">
             <span class="icon">gh</span>
-            github.com/devname
+            github.com/AhmetOezcan
           </a>
         </div>
       </div>
-      <div class="reveal">
-        <div class="contact-form">
-          <div class="form-group">
-            <label class="form-label">Name</label>
-            <input class="form-input" type="text" placeholder="Max Mustermann">
-          </div>
-          <div class="form-group">
-            <label class="form-label">E-Mail</label>
-            <input class="form-input" type="email" placeholder="max@beispiel.de">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Nachricht</label>
-            <textarea class="form-textarea" placeholder="Erzähl mir von deinem Projekt..."></textarea>
-          </div>
-          <button class="btn-primary" style="width: fit-content; cursor: none;" onclick="this.textContent='✓ Gesendet!'">
-            Nachricht senden
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </button>
+      <form action="https://formspree.io/f/mojkwjre" method="POST" class="contact-form">
+        <div class="form-group">
+          <label class="form-label">Name</label>
+          <input class="form-input" type="text" name="name" placeholder="Max Mustermann" required>
         </div>
-      </div>
+        <div class="form-group">
+          <label class="form-label">E-Mail</label>
+          <input class="form-input" type="email" name="email" placeholder="max@beispiel.de" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Nachricht</label>
+          <textarea class="form-textarea" name="message" placeholder="Erzähl mir von deinem Projekt..." required></textarea>
+        </div>
+        <button class="btn-primary" type="submit" style="width: fit-content; cursor: none;">
+          Nachricht senden
+        </button>
+      </form>
     </div>
   </section>
   
@@ -357,10 +354,8 @@
   <footer>
     <div class="copy">© 2026 devPortfolio — Alle Rechte vorbehalten</div>
     <div class="footer-social">
-      <a href="#">GitHub</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">Twitter/X</a>
-      <a href="#">Dribbble</a>
+      <a href="https://github.com/AhmetOezcan?tab=repositories">GitHub</a>
+      <a href="https://www.linkedin.com/in/ahmet-oezcan/">LinkedIn</a>
     </div>
   </footer>
 
