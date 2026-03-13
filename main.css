@@ -769,3 +769,22 @@ footer .copy {
   .exp-dot { display: none; }
   footer { flex-direction: column; gap: 1.5rem; padding: 2rem; }
 }
+
+/* DEV BUTTON */
+.dev-button {
+  cursor: pointer;
+  font-family: monospace;
+  opacity: 1;
+  transform: scale(1);
+  transition:
+    opacity 0.6s cubic-bezier(0.4, 0.0, 0.2, 1),
+    transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.dev-button.is-fading {
+  opacity: 0;
+  transform: scale(0.96);
+}
+.name       { color: #38bdf8; }
+.code-green { color: #22c55e; }
+.dev-button:hover { opacity: 0.9; }
