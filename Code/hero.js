@@ -1,4 +1,6 @@
 // ── PARTICLES ──
+const isSmallScreen = window.matchMedia("(max-width: 640px)").matches;
+
 tsParticles.load("tsparticles", {
   fullScreen: { enable: false },
   background: { color: "transparent" },
@@ -6,24 +8,31 @@ tsParticles.load("tsparticles", {
   detectRetina: true,
   interactivity: {
     events: {
-      onHover: { enable: true, mode: "grab" },
+      onHover: { enable: !isSmallScreen, mode: "grab" },
       resize: true,
     },
     modes: {
-      grab: { distance: 140, links: { opacity: 0.35 } },
+      grab: { distance: isSmallScreen ? 110 : 140, links: { opacity: 0.35 } },
     },
   },
   particles: {
-    number: { value: 70, density: { enable: true, area: 900 } },
+    number: {
+      value: isSmallScreen ? 38 : 70,
+      density: { enable: true, area: isSmallScreen ? 700 : 900 },
+    },
     color: { value: "#93c5fd" },
     links: {
       enable: true,
-      distance: 140,
+      distance: isSmallScreen ? 110 : 140,
       color: "#60a5fa",
       opacity: 0.25,
       width: 1,
     },
-    move: { enable: true, speed: 1.1, outModes: { default: "out" } },
+    move: {
+      enable: true,
+      speed: isSmallScreen ? 0.8 : 1.1,
+      outModes: { default: "out" },
+    },
     opacity: { value: 0.6 },
     size: { value: { min: 1, max: 3 } },
   },
@@ -103,13 +112,25 @@ window.addEventListener("DOMContentLoaded", () => {
   if (!heroName) return;
 
   const text = heroName.textContent.trim();
-  heroName.textContent = ""; // clear original text
+  const words = text.split(/\s+/);
+  let letterIndex = 0;
 
-  [...text].forEach((char, index) => {
-    const span = document.createElement("span");
-    span.className = "hero-letter";
-    span.textContent = char === " " ? "\u00A0" : char; // preserve spaces
-    span.style.animationDelay = `${index * 0.08}s`;    // later letters start later
-    heroName.appendChild(span);
+  heroName.textContent = "";
+  heroName.setAttribute("aria-label", text);
+
+  words.forEach(word => {
+    const wordSpan = document.createElement("span");
+    wordSpan.className = "hero-word";
+
+    [...word].forEach(char => {
+      const span = document.createElement("span");
+      span.className = "hero-letter";
+      span.textContent = char;
+      span.style.animationDelay = `${letterIndex * 0.08}s`;
+      wordSpan.appendChild(span);
+      letterIndex += 1;
+    });
+
+    heroName.appendChild(wordSpan);
   });
 });
