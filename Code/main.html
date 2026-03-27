@@ -1,403 +1,566 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ahmet Özcan</title>
-  <link rel="stylesheet" href="main.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ahmet Özcan</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
 
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
-  
-  <!-- NAV -->
-  <nav id="nav">
-    <span id="devButton" class="dev-button">
-      &lt;<span class="name">AhmetOezcan</span> /&gt;
-    </span>
-    <div class="nav-links">
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projekte</a>
-      <a href="#experience">Erfahrung</a>
-      <a href="#contact">Kontakt</a>
-    </div>
-  </nav>
-  
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-grid"></div>
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="hero-badge-dot"></span>
-        Verfügbar für neue Projekte
+    <!-- NAV -->
+    <nav id="nav">
+      <span id="devButton" class="dev-button">
+        &lt;<span class="name">AhmetOezcan</span> /&gt;
+      </span>
+      <div class="nav-links">
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projekte</a>
+        <a href="#experience">Erfahrung</a>
+        <a href="#contact">Kontakt</a>
       </div>
-      <h1 class="hero-title">
-        Software<br>
-        <span class="line2">Engineer</span><br>
-        &amp; <span class="accent-word">Creator</span>
-      </h1>
-      <p class="hero-desc">
-        Ich baue skalierbare, performante Anwendungen mit modernen Technologien — von der Architektur bis zum letzten Pixel.
-      </p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn-primary">
-          Projekte ansehen
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="#contact" class="btn-ghost">Kontakt</a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="code-window">
-        <div class="code-titlebar">
-          <div class="dot dot-r"></div>
-          <div class="dot dot-y"></div>
-          <div class="dot dot-g"></div>
-          <span class="code-filename">portfolio.ts</span>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Verfügbar für neue Projekte
         </div>
-        <div class="code-body">
-          <div><span class="ln">01</span><span class="kw">interface</span> <span class="nb">Developer</span> {</div>
-          <div><span class="ln">02</span>  name: <span class="nb">string</span>;</div>
-          <div><span class="ln">03</span>  skills: <span class="nb">string</span>[];</div>
-          <div><span class="ln">04</span>  passion: <span class="str">"building"</span>;</div>
-          <div><span class="ln">05</span>}</div>
-          <div><span class="ln">06</span></div>
-          <div><span class="ln">07</span><span class="cm">// Mein Ansatz</span></div>
-          <div><span class="ln">08</span><span class="kw">const</span> <span class="fn">createSolution</span> = (</div>
-          <div><span class="ln">09</span>  problem: <span class="nb">Challenge</span></div>
-          <div><span class="ln">10</span>) <span class="kw">=&gt;</span> {</div>
-          <div><span class="ln">11</span>  <span class="kw">return</span> {</div>
-          <div><span class="ln">12</span>    quality: <span class="str">"100%"</span>,</div>
-          <div><span class="ln">13</span>    speed: <span class="str">"optimal"</span>,</div>
-          <div><span class="ln">14</span>    design: <span class="str">"einzigartig"</span><span class="typing-cursor"></span></div>
-          <div><span class="ln">15</span>  };</div>
-          <div><span class="ln">16</span>};</div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- STATS -->
-  <div class="stats-bar">
-    <div class="stat reveal">
-      <div class="stat-num">4<span class="accent">+</span></div>
-      <div class="stat-label">Jahre Erfahrung in Programmierung</div>
-    </div>
-    <div class="stat reveal">
-      <div class="stat-num">42<span class="accent">+</span></div>
-      <div class="stat-label">Projekte abgeschlossen</div>
-    </div>
-    <div class="stat reveal">
-      <div class="stat-num">9<span class="accent">+</span></div>
-      <div class="stat-label">Zufriedene Kunden</div>
-    </div>
-    <div class="stat reveal">
-      <div class="stat-num">∞</div>
-      <div class="stat-label">Kaffee getrunken</div>
-    </div>
-  </div>
-  
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="section-header">
-      <span class="section-num">// 01</span>
-      <h2 class="section-title">Tech Stack</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="skills-grid">
-      <div class="skill-card reveal">
-        <span class="skill-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="4" width="18" height="12" rx="2"></rect>
-            <path d="M8 20h8"></path>
-            <path d="M12 16v4"></path>
-            <path d="m10 9 2-2 2 2"></path>
-            <path d="m10 12 2 2 2-2"></path>
-          </svg>
-        </span>
-        <div class="skill-name">Frontend Development</div>
-        <div class="skill-desc">Moderne, performante UIs mit Fokus auf UX und Barrierefreiheit.</div>
-        <div class="skill-tags">
-          <span class="tag">React</span>
-          <span class="tag">Next.js</span>
-          <span class="tag">TypeScript</span>
-          <span class="tag">Tailwind</span>
-          <span class="tag">Framer Motion</span>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <span class="skill-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="4" y="5" width="16" height="14" rx="2"></rect>
-            <path d="M9 9h6"></path>
-            <path d="M9 12h6"></path>
-            <path d="M9 15h3"></path>
-            <path d="M17 3v4"></path>
-            <path d="M7 3v4"></path>
-          </svg>
-        </span>
-        <div class="skill-name">Backend & APIs</div>
-        <div class="skill-desc">Skalierbare Server-Architekturen und robuste REST- sowie GraphQL-APIs.</div>
-        <div class="skill-tags">
-          <span class="tag">Node.js</span>
-          <span class="tag">Go</span>
-          <span class="tag">PostgreSQL</span>
-          <span class="tag">Redis</span>
-          <span class="tag">GraphQL</span>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <span class="skill-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M7 18a4 4 0 1 1 .8-7.92A5.5 5.5 0 0 1 18 12a3.5 3.5 0 1 1-.5 6Z"></path>
-            <path d="m10 13 2-2 2 2"></path>
-            <path d="M12 11v6"></path>
-          </svg>
-        </span>
-        <div class="skill-name">Cloud & DevOps</div>
-        <div class="skill-desc">CI/CD-Pipelines, Container-Orchestrierung und Cloud-Infrastruktur.</div>
-        <div class="skill-tags">
-          <span class="tag">Docker</span>
-          <span class="tag">Kubernetes</span>
-          <span class="tag">AWS</span>
-          <span class="tag">GitHub Actions</span>
-          <span class="tag">Terraform</span>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <span class="skill-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="6" y="8" width="12" height="10" rx="3"></rect>
-            <path d="M12 4v4"></path>
-            <path d="M9 12h.01"></path>
-            <path d="M15 12h.01"></path>
-            <path d="M9 16h6"></path>
-            <path d="M4 11v4"></path>
-            <path d="M20 11v4"></path>
-          </svg>
-        </span>
-        <div class="skill-name">AI & Machine Learning</div>
-        <div class="skill-desc">Integration von LLMs und intelligenten Features in Produktionsanwendungen.</div>
-        <div class="skill-tags">
-          <span class="tag">Python</span>
-          <span class="tag">LangChain</span>
-          <span class="tag">OpenAI API</span>
-          <span class="tag">Vector DB</span>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <span class="skill-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="7" y="3" width="10" height="18" rx="2"></rect>
-            <path d="M11 6h2"></path>
-            <path d="M12 17h.01"></path>
-          </svg>
-        </span>
-        <div class="skill-name">Mobile Development</div>
-        <div class="skill-desc">Cross-Platform Apps mit nativem Look & Feel für iOS und Android.</div>
-        <div class="skill-tags">
-          <span class="tag">React Native</span>
-          <span class="tag">Expo</span>
-          <span class="tag">Swift</span>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <span class="skill-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 4a8 8 0 1 0 0 16h1.2a2.3 2.3 0 0 0 0-4.6H12a2 2 0 0 1 0-4h.8A3.2 3.2 0 0 0 16 8.2 4.2 4.2 0 0 0 12 4Z"></path>
-            <path d="M8 9h.01"></path>
-            <path d="M7 13h.01"></path>
-            <path d="M11 7h.01"></path>
-          </svg>
-        </span>
-        <div class="skill-name">Design Systems</div>
-        <div class="skill-desc">Konsistente, skalierbare Designsysteme und Komponentenbibliotheken.</div>
-        <div class="skill-tags">
-          <span class="tag">Figma</span>
-          <span class="tag">Storybook</span>
-          <span class="tag">CSS Architecture</span>
-          <span class="tag">Design Tokens</span>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="section-header">
-      <span class="section-num">// 02</span>
-      <h2 class="section-title">Projekte</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="projects-grid">
-  
-      <!-- Featured -->
-      <div class="project-card featured reveal">
-        <div class="project-preview p1-preview">
-          <a href="https://side-quests-ai-pape.vercel.app/">
-          <img src="../Image/sidequests_bild.png" alt="SideQuest AI Projektvorschau" />
+        <h1 class="hero-title">
+          Software<br />
+          <span class="line2">Engineer</span><br />
+          &amp; <span class="accent-word">Creator</span>
+        </h1>
+        <p class="hero-desc">
+          Ich baue skalierbare, performante Anwendungen mit modernen
+          Technologien — von der Architektur bis zum letzten Pixel.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">
+            Projekte ansehen
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
           </a>
+          <a href="#contact" class="btn-ghost">Kontakt</a>
         </div>
-        <div class="project-info">
-  <div class="project-type">Featured Project · AI Learning Platform</div>
-  <div class="project-name">SideQuest AI</div>
-  <div class="project-desc">
-    Interactive AI-powered learning platform that transforms complex topics into structured step-by-step quests. 
-    Focuses on practical learning, guided progression, and real understanding instead of passive content consumption.
-  </div>
-  <div class="project-stack">
-    <span class="stack-tag">React</span>
-    <span class="stack-tag">Vite</span>
-    <span class="stack-tag">JavaScript</span>
-    <span class="stack-tag">CSS</span>
-  </div>
-  <a href="https://side-quests-ai-pape.vercel.app/" class="project-link">
-    View Project
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-      <path d="M7 17L17 7M17 7H7M17 7v10"/>
-    </svg>
-  </a>
-</div>
       </div>
-  
-      <!-- Project 2 -->
-      <div class="project-card reveal">
-        <div class="project-preview p2-preview">
-          <div class="project-preview-inner">
-            <div class="preview-bar">
-              <div class="preview-dot" style="background:#ff5f56"></div>
-              <div class="preview-dot" style="background:#ffbd2e"></div>
-              <div class="preview-dot" style="background:#27c93f"></div>
+      <div class="hero-visual">
+        <div class="code-window">
+          <div class="code-titlebar">
+            <div class="dot dot-r"></div>
+            <div class="dot dot-y"></div>
+            <div class="dot dot-g"></div>
+            <span class="code-filename">portfolio.ts</span>
+          </div>
+          <div class="code-body">
+            <div>
+              <span class="ln">01</span><span class="kw">interface</span>
+              <span class="nb">Developer</span> {
             </div>
-            <div class="preview-content">
-              <div class="preview-line" style="background:rgba(0,255,135,0.2); width:50%"></div>
-              <div class="preview-line med"></div>
-              <div class="preview-line short"></div>
-              <div style="height:0.5rem"></div>
-              <div class="preview-line" style="background:rgba(0,255,135,0.1); width:90%"></div>
-              <div class="preview-line med"></div>
+            <div>
+              <span class="ln">02</span> name: <span class="nb">string</span>;
             </div>
+            <div>
+              <span class="ln">03</span> skills:
+              <span class="nb">string</span>[];
+            </div>
+            <div>
+              <span class="ln">04</span> passion:
+              <span class="str">"building"</span>;
+            </div>
+            <div><span class="ln">05</span>}</div>
+            <div><span class="ln">06</span></div>
+            <div>
+              <span class="ln">07</span><span class="cm">// Mein Ansatz</span>
+            </div>
+            <div>
+              <span class="ln">08</span><span class="kw">const</span>
+              <span class="fn">createSolution</span> = (
+            </div>
+            <div>
+              <span class="ln">09</span> problem:
+              <span class="nb">Challenge</span>
+            </div>
+            <div>
+              <span class="ln">10</span>) <span class="kw">=&gt;</span> {
+            </div>
+            <div>
+              <span class="ln">11</span> <span class="kw">return</span> {
+            </div>
+            <div>
+              <span class="ln">12</span> quality:
+              <span class="str">"100%"</span>,
+            </div>
+            <div>
+              <span class="ln">13</span> speed:
+              <span class="str">"optimal"</span>,
+            </div>
+            <div>
+              <span class="ln">14</span> design:
+              <span class="str">"einzigartig"</span
+              ><span class="typing-cursor"></span>
+            </div>
+            <div><span class="ln">15</span> };</div>
+            <div><span class="ln">16</span>};</div>
           </div>
         </div>
-        <div class="project-info">
-          <div class="project-type">Open Source · CLI Tool</div>
-          <div class="project-name">DeployKit</div>
-          <div class="project-desc">Zero-Config Deployment-Tool für Node.js Apps. 2.4k GitHub Stars.</div>
-          <div class="project-stack">
-            <span class="stack-tag">Go</span>
-            <span class="stack-tag">Docker</span>
-            <span class="stack-tag">Shell</span>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats-bar">
+      <div class="stat reveal">
+        <div class="stat-num">4<span class="accent">+</span></div>
+        <div class="stat-label">Jahre Erfahrung in Programmierung</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num">42<span class="accent">+</span></div>
+        <div class="stat-label">Projekte abgeschlossen</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num">9<span class="accent">+</span></div>
+        <div class="stat-label">Zufriedene Kunden</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num">∞</div>
+        <div class="stat-label">Kaffee getrunken</div>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-header">
+        <span class="section-num">// 01</span>
+        <h2 class="section-title">Tech Stack</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <span class="skill-icon" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="4" width="18" height="12" rx="2"></rect>
+              <path d="M8 20h8"></path>
+              <path d="M12 16v4"></path>
+              <path d="m10 9 2-2 2 2"></path>
+              <path d="m10 12 2 2 2-2"></path>
+            </svg>
+          </span>
+          <div class="skill-name">Frontend Development</div>
+          <div class="skill-desc">
+            Moderne, performante UIs mit Fokus auf UX und Barrierefreiheit.
           </div>
-          <a href="#" class="project-link">
-            GitHub ansehen
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-          </a>
+          <div class="skill-tags">
+            <span class="tag">React</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Tailwind</span>
+            <span class="tag">Framer Motion</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <span class="skill-icon" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="4" y="5" width="16" height="14" rx="2"></rect>
+              <path d="M9 9h6"></path>
+              <path d="M9 12h6"></path>
+              <path d="M9 15h3"></path>
+              <path d="M17 3v4"></path>
+              <path d="M7 3v4"></path>
+            </svg>
+          </span>
+          <div class="skill-name">Backend & APIs</div>
+          <div class="skill-desc">
+            Skalierbare Server-Architekturen und robuste REST- sowie
+            GraphQL-APIs.
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">Go</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Redis</span>
+            <span class="tag">GraphQL</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <span class="skill-icon" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M7 18a4 4 0 1 1 .8-7.92A5.5 5.5 0 0 1 18 12a3.5 3.5 0 1 1-.5 6Z"
+              ></path>
+              <path d="m10 13 2-2 2 2"></path>
+              <path d="M12 11v6"></path>
+            </svg>
+          </span>
+          <div class="skill-name">Cloud & DevOps</div>
+          <div class="skill-desc">
+            CI/CD-Pipelines, Container-Orchestrierung und Cloud-Infrastruktur.
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Docker</span>
+            <span class="tag">Kubernetes</span>
+            <span class="tag">AWS</span>
+            <span class="tag">GitHub Actions</span>
+            <span class="tag">Terraform</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <span class="skill-icon" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="6" y="8" width="12" height="10" rx="3"></rect>
+              <path d="M12 4v4"></path>
+              <path d="M9 12h.01"></path>
+              <path d="M15 12h.01"></path>
+              <path d="M9 16h6"></path>
+              <path d="M4 11v4"></path>
+              <path d="M20 11v4"></path>
+            </svg>
+          </span>
+          <div class="skill-name">AI & Machine Learning</div>
+          <div class="skill-desc">
+            Integration von LLMs und intelligenten Features in
+            Produktionsanwendungen.
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">LangChain</span>
+            <span class="tag">OpenAI API</span>
+            <span class="tag">Vector DB</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <span class="skill-icon" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="7" y="3" width="10" height="18" rx="2"></rect>
+              <path d="M11 6h2"></path>
+              <path d="M12 17h.01"></path>
+            </svg>
+          </span>
+          <div class="skill-name">Mobile Development</div>
+          <div class="skill-desc">
+            Cross-Platform Apps mit nativem Look & Feel für iOS und Android.
+          </div>
+          <div class="skill-tags">
+            <span class="tag">React Native</span>
+            <span class="tag">Expo</span>
+            <span class="tag">Swift</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <span class="skill-icon" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M12 4a8 8 0 1 0 0 16h1.2a2.3 2.3 0 0 0 0-4.6H12a2 2 0 0 1 0-4h.8A3.2 3.2 0 0 0 16 8.2 4.2 4.2 0 0 0 12 4Z"
+              ></path>
+              <path d="M8 9h.01"></path>
+              <path d="M7 13h.01"></path>
+              <path d="M11 7h.01"></path>
+            </svg>
+          </span>
+          <div class="skill-name">Design Systems</div>
+          <div class="skill-desc">
+            Konsistente, skalierbare Designsysteme und Komponentenbibliotheken.
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Figma</span>
+            <span class="tag">Storybook</span>
+            <span class="tag">CSS Architecture</span>
+            <span class="tag">Design Tokens</span>
+          </div>
         </div>
       </div>
-  
-      <!-- Project 3 -->
-<div class="project-card reveal">
+    </section>
 
-  <div class="project-preview p3-preview">
-    <a href="https://ahmetoezcan.github.io/Cocktail-Website/">
-    <img src="../Image/Cocktail_bild.png" alt="Cocktail-Preview">
-    </a>
-  </div>
-
-  <div class="project-info">
-
-    <div class="project-type">Web Application</div>
-
-    <div class="project-name">CocktailCraft</div>
-
-    <div class="project-desc">
-      Interactive cocktail discovery platform where users can search drinks by ingredient or name,
-      explore recipes and generate random cocktails. Built with vanilla JavaScript and a public cocktail API.
-    </div>
-
-    <div class="project-stack">
-      <span class="stack-tag">HTML</span>
-      <span class="stack-tag">CSS</span>
-      <span class="stack-tag">JavaScript</span>
-      <span class="stack-tag">REST API</span>
-    </div>
-
-    <a href="https://ahmetoezcan.github.io/Cocktail-Website/" class="project-link">
-      View Project
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-        <path d="M7 17L17 7M17 7H7M17 7v10"/>
-      </svg>
-    </a>
-
-  </div>
-
-</div>
-  
-    </div>
-  </section>
-  
-  
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="section-header">
-      <span class="section-num">// 03</span>
-      <h2 class="section-title">Kontakt</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="contact-inner">
-      <div class="contact-text reveal">
-        <div class="big">
-          Lass uns etwas<br>
-          <span class="line2">Großartiges</span><br>
-          bauen.
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-header">
+        <span class="section-num">// 02</span>
+        <h2 class="section-title">Projekte</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-grid">
+        <!-- Featured -->
+        <div class="project-card featured reveal">
+          <div class="project-preview p1-preview">
+            <a href="https://side-quests-ai.vercel.app/">
+              <img
+                src="../Image/sidequests_bild.png"
+                alt="SideQuest AI Projektvorschau"
+              />
+            </a>
+          </div>
+          <div class="project-info">
+            <div class="project-type">Hauptprojekt · KI-Lernplattform</div>
+            <div class="project-name">SideQuest AI</div>
+            <div class="project-desc">
+              Interaktive, KI-gestützte Lernplattform, die komplexe Themen in
+              strukturierte Schritt-für-Schritt-Quests verwandelt. Der Fokus
+              liegt auf praktischem Lernen, klarer Führung und echtem
+              Verständnis statt passivem Konsum von Inhalten.
+            </div>
+            <div class="project-stack">
+              <span class="stack-tag">React</span>
+              <span class="stack-tag">Vite</span>
+              <span class="stack-tag">JavaScript</span>
+              <span class="stack-tag">CSS</span>
+            </div>
+            <a href="https://side-quests-ai.vercel.app/" class="project-link">
+              Projekt ansehen
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </a>
+          </div>
         </div>
-        <p>Ich bin offen für Vollzeit-Stellen, Freelance-Projekte und spannende Kooperationen. Schreib mir einfach.</p>
-        <div class="contact-links">
-          <a href="mailto:ahmetzcan1@outlook.com" class="contact-link">
-            <span class="icon">@</span>
-            ahmetzcan1@outlook.com
-          </a>
-          <a href="https://www.linkedin.com/in/ahmet-oezcan/" class="contact-link">
-            <span class="icon">in</span>
-            linkedin.com/in/ahmet-oezcan/
-          </a>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal">
+          <div class="project-preview p2-preview">
+            <a href="https://ahmetoezcan.github.io/checkliste/">
+              <img
+                src="../Image/checkliste_bild.png"
+                alt="SmartChecklist Projektvorschau"
+              />
+            </a>
+          </div>
+          <div class="project-info">
+            <div class="project-type">Freelance · Web Tool</div>
+            <div class="project-name">SmartChecklist</div>
+            <div class="project-desc">
+              Interaktive Web-Checkliste für technische Systeme (z. B.
+              Energiespeicher). Optimiert Datenerfassung, reduziert Fehler und
+              verbessert Arbeitsabläufe im Feld.
+            </div>
+            <div class="project-stack">
+              <span class="stack-tag">HTML</span>
+              <span class="stack-tag">CSS</span>
+              <span class="stack-tag">JavaScript</span>
+            </div>
+            <a href="https://ahmetoezcan.github.io/checkliste/" class="project-link">
+              Projekt ansehen
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal">
+          <div class="project-preview p3-preview">
+            <a href="https://ahmetoezcan.github.io/Cocktail-Website/">
+              <img
+                src="../Image/Cocktail_bild.png"
+                alt="CocktailCraft Projektvorschau"
+              />
+            </a>
+          </div>
+
+          <div class="project-info">
+            <div class="project-type">Webanwendung</div>
+
+            <div class="project-name">CocktailCraft</div>
+
+            <div class="project-desc">
+              Interaktive Cocktail-Plattform, auf der Nutzer Drinks nach
+              Zutaten oder Namen suchen, Rezepte entdecken und zufällige
+              Cocktails generieren können. Entwickelt mit Vanilla JavaScript
+              und einer öffentlichen Cocktail-API.
+            </div>
+
+            <div class="project-stack">
+              <span class="stack-tag">HTML</span>
+              <span class="stack-tag">CSS</span>
+              <span class="stack-tag">JavaScript</span>
+              <span class="stack-tag">REST API</span>
+            </div>
+
+            <a
+              href="https://ahmetoezcan.github.io/Cocktail-Website/"
+              class="project-link"
+            >
+              Projekt ansehen
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
-      <form action="https://formspree.io/f/mojkwjre" method="POST" class="contact-form">
-        <div class="form-group">
-          <label class="form-label">Name</label>
-          <input class="form-input" type="text" name="name" placeholder="Max Mustermann" required>
-        </div>
-        <div class="form-group">
-          <label class="form-label">E-Mail</label>
-          <input class="form-input" type="email" name="email" placeholder="max@beispiel.de" required>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Nachricht</label>
-          <textarea class="form-textarea" name="message" placeholder="Erzähl mir von deinem Projekt..." required></textarea>
-        </div>
-        <button class="btn-primary" type="submit" style="width: fit-content; cursor: none;">
-          Nachricht senden
-        </button>
-      </form>
-    </div>
-  </section>
-  
-  <!-- FOOTER -->
-  <footer>
-    <div class="copy">© 2026 devPortfolio — Alle Rechte vorbehalten</div>
-    <div class="footer-social">
-      <a href="https://www.linkedin.com/in/ahmet-oezcan/">LinkedIn</a>
-    </div>
-  </footer>
+    </section>
 
-  <script src="main.js"></script>
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-header">
+        <span class="section-num">// 03</span>
+        <h2 class="section-title">Kontakt</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-inner">
+        <div class="contact-text reveal">
+          <div class="big">
+            Lass uns etwas<br />
+            <span class="line2">Großartiges</span><br />
+            bauen.
+          </div>
+          <p>
+            Ich bin offen für Vollzeit-Stellen, Freelance-Projekte und spannende
+            Kooperationen. Schreib mir einfach.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:ahmetzcan1@outlook.com" class="contact-link">
+              <span class="icon">@</span>
+              ahmetzcan1@outlook.com
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ahmet-oezcan/"
+              class="contact-link"
+            >
+              <span class="icon">in</span>
+              linkedin.com/in/ahmet-oezcan/
+            </a>
+            <a
+              href="https://github.com/AhmetOezcan"
+              class="contact-link"
+            >
+              <span class="icon">Git</span>
+              github/AhmetOezcan
+            </a>
+          </div>
+        </div>
+        <form
+          action="https://formspree.io/f/mojkwjre"
+          method="POST"
+          class="contact-form"
+        >
+          <div class="form-group">
+            <label class="form-label">Name</label>
+            <input
+              class="form-input"
+              type="text"
+              name="name"
+              placeholder="Max Mustermann"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label">E-Mail</label>
+            <input
+              class="form-input"
+              type="email"
+              name="email"
+              placeholder="max@beispiel.de"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Nachricht</label>
+            <textarea
+              class="form-textarea"
+              name="message"
+              placeholder="Erzähl mir von deinem Projekt..."
+              required
+            ></textarea>
+          </div>
+          <button
+            class="btn-primary"
+            type="submit"
+            style="width: fit-content; cursor: none"
+          >
+            Nachricht senden
+          </button>
+        </form>
+      </div>
+    </section>
 
-</body>
+    <!-- FOOTER -->
+    <footer>
+      <div class="copy">© 2026 devPortfolio — Alle Rechte vorbehalten</div>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/ahmet-oezcan/">LinkedIn</a>
+      </div>
+    </footer>
 
-  
-  
+    <script src="main.js"></script>
+  </body>
 </html>
